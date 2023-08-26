@@ -1,6 +1,6 @@
 {
   "name": "@sgh-capital/copyfiles",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "description": "copy some files",
   "main": "index.js",
   "bin": {
@@ -14,10 +14,9 @@
   "license": "MIT",
   "dependencies": {
     "glob": "^8.1.0",
-    "minimatch": "^8.0.0",
     "mkdirp": "^2.1.6",
     "noms": "0.0.0",
-    "through2": "^3.0.2",
+    "through2": "^4.0.2",
     "untildify": "^4.0.0",
     "yargs": "^17.7.2"
   },
