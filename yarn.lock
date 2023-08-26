@@ -11,7 +11,7 @@
     split "1.0.1"
     trim "1.0.1"
 
-"@sgh-capital/tap-spec@^5.0.0":
+"@sgh-capital/tap-spec@^5.0.1":
   version "5.0.1"
   resolved "https://npm.pkg.github.com/download/@sgh-capital/tap-spec/5.0.1/f70b98f7c4a3d612b108f1fb3f4533ece1abcce8#f70b98f7c4a3d612b108f1fb3f4533ece1abcce8"
   integrity sha512-MmIKU4DCD3yYRRHcQmRPao6BJKHTxXJJARPdi7bJFgya6eifXjQ73dIK67RwPbbCg9vjX+UwWLxXM/GhwXFEIA==
