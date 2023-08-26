@@ -1,5 +1,5 @@
 {
-  "name": "copyfiles",
+  "name": "@sgh-capital/copyfiles",
   "version": "2.4.2",
   "description": "copy some files",
   "main": "index.js",
@@ -23,7 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/calvinmetcalf/copyfiles.git"
+    "url": "git@github.com:SGH-Capital/copyfiles.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
