@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "tap-spec": "^5.0.0",
+    "@sgh-capital/tap-spec": "^5.0.1",
     "tape": "^4.16.2"
   }
 }
