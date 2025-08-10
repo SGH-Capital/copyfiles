@@ -3,11 +3,11 @@ const test = require('tape')
 const copyfiles = require('../')
 const rimraf = require('rimraf')
 const fs = require('fs')
-const _mkdirp = require('mkdirp')
+const { mkdirp } = require('mkdirp')
 const cp = require('child_process')
 const glob = require('glob')
-const mkdirp = (path, cb) => {
-  _mkdirp(path).then(() => {
+const _mkdirp = (path, cb) => {
+  mkdirp(path).then(() => {
     cb()
   }, cb)
 }
@@ -21,7 +21,7 @@ function after (t) {
   })
 }
 function before (t) {
-  mkdirp('input/other', function (err) {
+  _mkdirp('input/other', function (err) {
     t.error(err, 'rm input')
     t.end()
   })
@@ -162,7 +162,7 @@ test('all from cl 2', function (t) {
 test('soft', function (t) {
   t.test('setup', before)
   t.test('copy stuff', function (t) {
-    mkdirp('output/input/other', function () {
+    _mkdirp('output/input/other', function () {
       fs.writeFileSync('input/a.txt', 'inputA')
       fs.writeFileSync('output/input/a.txt', 'outputA')
       t.equal(fs.readFileSync('output/input/a.txt').toString(), 'outputA')
@@ -188,7 +188,7 @@ test('soft', function (t) {
 test('soft from cl', function (t) {
   t.test('setup', before)
   t.test('copy stuff', function (t) {
-    mkdirp('output/input/other', function () {
+    _mkdirp('output/input/other', function () {
       fs.writeFileSync('input/a.txt', 'inputA')
       fs.writeFileSync('output/input/a.txt', 'outputA')
       t.equal(fs.readFileSync('output/input/a.txt').toString(), 'outputA')
@@ -213,7 +213,7 @@ test('soft from cl', function (t) {
 test('soft from cl 2', function (t) {
   t.test('setup', before)
   t.test('copy stuff', function (t) {
-    mkdirp('output/input/other', function () {
+    _mkdirp('output/input/other', function () {
       fs.writeFileSync('input/a.txt', 'inputA')
       fs.writeFileSync('output/input/a.txt', 'outputA')
       t.equal(fs.readFileSync('output/input/a.txt').toString(), 'outputA')

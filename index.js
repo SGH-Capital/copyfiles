@@ -2,7 +2,7 @@
 const path = require('path')
 const fs = require('fs')
 const glob = require('glob')
-const mkdirp = require('mkdirp')
+const { mkdirp } = require('mkdirp')
 const untildify = require('untildify')
 const through = require('through2').obj
 const noms = require('noms').obj
